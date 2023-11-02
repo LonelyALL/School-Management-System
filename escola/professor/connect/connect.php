@@ -1,3 +1,3 @@
 <?php 
-    $conn = mysqli_connect("localhost", "root", "root", "escolaenzow");
+    $conn = mysqli_connect("localhost", "user", "pass", "database");
 ?>
