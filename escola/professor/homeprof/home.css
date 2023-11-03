@@ -1,0 +1,144 @@
+*{
+
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+body{
+
+    background: #f6f6f9;
+}
+
+header{
+
+    width: 100%;
+    height: 80px;
+    background: #164a3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo{
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.nav-bar-elements{
+
+    display: flex;
+    flex-direction: right;
+    justify-content: flex-start;
+}
+
+.nav-bar ul{
+
+    display: flex;
+}
+
+.nav-bar ul li a{
+
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+
+    color: #11101b;
+    background: #eee;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #164a3d;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 70%;
+    color: #fff;
+}
+
+.container-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+}
+
+.box-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputs{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    width: 50%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.inputs select{
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.inputs select:focus{
+    border: 1px solid #03c938;
+    outline: #03c938;
+}
+
+.inputs span{
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.inputs button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(21, 255, 0, 0.7);
+    width: 20%;
+    background-color: #03c938;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.inputs button:hover{
+    background-color: #eee;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}

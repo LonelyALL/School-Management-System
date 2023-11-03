@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #f6f6f9;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background-color: #164a3d;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+a:hover{
+    background-color: #eee;
+    color: black;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+.fas{  
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logo:hover{
+    background: #eee;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.container{
+    margin-left: 100px;
+}
+
+.box{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+.inputs{
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 35%;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.inputs span{
+
+    margin-top: 15px;
+}
+
+.inputs input{
+
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    margin-top: 5px;
+    background-color: #eee;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputs .buttons button{
+
+    padding: 10px;
+    border-radius: 5px;
+    width: 75%;
+    margin-top: 15px;
+    border: 1px solid #03c938;
+    background-color: #03c938;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.inputs .buttons button:hover{
+    cursor: pointer;
+    background-color: #eee;
+    transition-duration: 0.2s;
+}
+
+.inputs select{
+
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 5px;
+    background-color: #eee;
+    border: 1px solid #c2c2c2;
+}
+
+.inputs select:focus{
+    border: 1px solid #03c938;
+    outline: #03c938;
+}
+
+.inputs input:focus{
+    border: 1px solid #03c938;
+    outline: #03c938;
+}
+
+.inputs h3{
+    color: rgb(85, 83, 83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1110px){
+    .inputs{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .inputs{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .inputs{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .inputs{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .inputs{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .inputs{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .inputs{
+        width: 95%;
+    }
+}
+
+#error{
+    display: flex;
+    position: relative;
+    background-color: rgb(255, 0, 0, 0.3);
+    padding: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    color: black;
+    border-left: 15px solid red;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+svg{
+    margin-right: 10px;
+}
+
+#sucess{
+    display: flex;
+    position: relative;
+    background-color: rgb(0, 255, 0, 0.3);
+    padding: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    color: black;
+    border-left: 15px solid green;
+    border-radius: 3px;
+    z-index: 2;
+}
