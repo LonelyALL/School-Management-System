@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #f6f6f9;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background-color: #164a3d;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+a:hover{
+    background-color: #eee;
+    color: black;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+.fas{  
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logo:hover{
+    background: #eee;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.box .align{
+    margin-top: 5px;
+    padding: 32px;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.box .align h3{
+    color: rgb(85, 83, 83);
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 70%;
+    color: rgb(85, 83, 83);
+}
+
+.container button{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 5px;
+    width: 15%;
+}
+
+.container button:hover{
+    background-color: #eee;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.align .n{
+    margin-top: 7px;
+    font-size: 35px;
+    color: rgba(0, 0, 0);
+}
+
+@media screen and (max-width: 850px){
+    .container button{
+        width: 20%;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .container button{
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .box .align{
+        width: 90%;
+    }
+    .container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 460px){
+
+    .box .align{
+        width: 90%;
+        padding: 28px;
+    }
+    .container{
+        width: 90%;
+    }
+    h3{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 380px){
+
+    .align .n{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #f6f6f9;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background-color: #164a3d;
+    width: 90px;
+    z-index: 10;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a{
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+a:hover{
+    background-color: #eee;
+    color: black;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+.fas{  
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logo:hover{
+    background: #eee;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.box{
+    margin-left: 100px;
+}
+
+.scrollable-table {
+    display: block;
+    max-height: 350px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.table-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #def2e7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 80%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table td{
+    background-color: #def2e7;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+table td select{
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #64948c;
+    color: white;
+    border: 2px solid #fff;
+}
+
+table td select:focus{
+    border: 2px solid #fff;
+    outline: #fff;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.errors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#error{
+    display: flex;
+    position: relative;
+    background-color: rgb(255, 0, 0, 0.3);
+    padding: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+    width: 90%;
+    font-weight: bold;
+    color: black;
+    border-left: 15px solid red;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+svg{
+    margin-right: 10px;
+}
+
+#sucess{
+    display: flex;
+    position: relative;
+    background-color: rgb(0, 255, 0, 0.3);
+    padding: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+    width: 90%;
+    font-weight: bold;
+    color: black;
+    border-left: 15px solid green;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.box-inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    min-width: 80%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.box-inputs select{
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white;
+    border: 2px solid #fff;
+    margin-right: 10px;
+}
+.box-inputs button{
+    width: 20%;
+    background-color: #03c938;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.box-inputs button:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: #eee;
+}
+
+.inputs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrollable-table::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.scrollable-table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+.scrollable-table::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.turma{
+    background-color: #eee;
+    border: 0;
+}
+
+#deletar{
+    background-color: #64948c;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    border: 0;
+}
+
+#deletar:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: #eee;
+    color: black;
+}
+
+.td-deletar{
+    background-color: inherit;
+}
+
+.title{
+    background-color: #64948c;
+    color: white;
+    padding: 10px;
+}
