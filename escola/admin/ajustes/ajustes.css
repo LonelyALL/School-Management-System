@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #f6f6f9;  
+    overflow: hidden;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background-color: #164a3d;
+    width: 90px;
+    z-index: 10;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo{
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span{
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav ul li a{
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+nav ul li a:hover{
+    background-color: #eee;
+    color: black;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+.fas{  
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logo:hover{
+    background: #eee;
+}
+
+nav:hover{
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.box{
+    margin-left: 100px;
+}
+
+#formmedia, #formsegmento   {
+    margin-top: 10px;
+    width: 40%;
+}
+
+.boxmedia, .boxsegmentos{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.boxmedia input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: #eee;
+    width: 20%;
+    margin-left: 10px;
+}
+.boxmedia button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(21, 255, 0, 0.7);
+    width: 40%;
+    background-color: #03c938;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.boxmedia button:hover, .boxsegmentos button:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: #eee;
+}
+
+.boxsegmentos input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: #eee;
+    width: 20%;
+    margin-left: 10px;
+}
+
+.boxsegmentos button{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(21, 255, 0, 0.7);
+    width: 40%;
+    background-color: #03c938;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#error{
+    display: flex;
+    position: relative;
+    background-color: rgb(255, 0, 0, 0.3);
+    padding: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+    width: 90%;
+    font-weight: bold;
+    color: black;
+    border-left: 15px solid red;
+    border-radius: 3px;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+#sucess{
+    display: flex;
+    position: relative;
+    background-color: rgb(0, 255, 0, 0.3);
+    padding: 10px;
+    opacity: 0.9;
+    margin-top: 10px;
+    width: 90%;
+    font-weight: bold;
+    color: black;
+    border-left: 15px solid green;
+    border-radius: 3px;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+svg{
+    margin-right: 10px;
+}
+
+.errors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    overflow: auto;
+    height: 200px;
+}
+
+table td{
+    background-color: #eee;
+    border: 0;
+    padding: 0px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.segmentotd{
+    width: 100%;    
+}
+.delete{
+    background-color: #fff;
+    margin-left: 10px;
+}
+.scrollable-table a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.scrollable-table {
+    max-height: 500px;
+    display: grid;
+}
+
+.delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrollable-table a:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.scrollable-table::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.scrollable-table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+.scrollable-table::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.boxtable{
+    display: flex;
+    width: 100%;
+}
+
+#table2{
+    margin-left: 100px;
+}
+
+#avaliacao{
+    width: 150px;
+}
+
+#avaliacaoButton{
+    width: 140px;
+}
+
+.popup{
+    display: none;  
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+.popupbox{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #d1d1d1;
+}
+
+.popup .buttons{
+    display: flex;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.buttons button{
+    padding: 10px;
+}
+
+#confirmar{
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-left: 10px;
+    color: white;
+    width: 50%;
+    background-color: rgba(255, 0, 0, 0.7);
+    border: 0;
+}
+
+#cancelar{
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #eee;
+    font-size: 15px;
+    margin-left: 10px;
+    width: 50%;
+    border: 0;
+}
+
+#confirmar:hover{
+    background-color: #eee;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    color: black;
+}
+
+#cancelar:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+
+#form-notas button{
+    background-color: #03c938;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-left: 10px;  
+    font-size: 18px;
+    color: black;
+    width: 15%;
+}
+
+#form-notas button:hover{
+    background-color: #eee;
+    color: black;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}

@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: #f6f6f9;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    
+}
+.box{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 30%;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+.inputs input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+}
+
+.inputs select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+}
+
+.inputs input:focus{
+    border: 1px solid #03c938;
+    outline: #03c938;
+}
+
+.inputs select:focus{
+    border: 1px solid #03c938;
+    outline: #03c938;
+}
+
+.inputs span{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.buttons button{
+    background-color: #03c938;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    border: 0;
+    margin-top: 15px;
+}
+
+.buttons button:hover{
+    transition-duration: 0.2s;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1200px){
+    .box{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .box{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .box{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .box{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .box{
+        width: 90%;
+    }
+}

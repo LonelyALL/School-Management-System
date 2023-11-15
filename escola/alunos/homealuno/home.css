@@ -1,0 +1,139 @@
+*{
+
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+body{
+
+    background: #f6f6f9;
+}
+
+header{
+
+    width: 100%;
+    height: 80px;
+    background: #164a3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo{
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.nav-bar-elements{
+
+    display: flex;
+    flex-direction: right;
+    justify-content: flex-start;
+}
+
+.nav-bar ul{
+
+    display: flex;
+}
+
+.nav-bar ul li a{
+
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+
+    color: #11101b;
+    background: #eee;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+}
+
+.items{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 40%;
+    border: 2px solid #eee;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.title{
+    display: flex;
+    background-color: #164a3d;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+
+.turmaSerie{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.matricula{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.button a {
+    border: 1px solid #03c938;
+    background-color: #03c938;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.button a:hover{
+    background-color: #eee;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    color: black;
+}

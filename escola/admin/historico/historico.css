@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background: #f6f6f9;
+}
+
+.box{
+    margin-left: 10px;
+}
+
+.nomealuno{
+    display: flex;
+    background-color: #164a3d;
+    background-color: #64948c;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 40%;
+    font-weight: bold;
+    color: #fff;
+}
+
+table{
+    background-color: #def2e7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 99.5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid rgb(143, 143, 143);
+}
+
+table tr{
+    width: 100%;
+}
+table td{
+    background-color: #def2e7;
+    border: 0;
+    padding: 10px;
+    text-align: center;
+    width: 5%;
+    color: #164a3d;
+}
+
+.scrollable-table {
+    display: grid;
+    max-height: 650px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.title{
+    background-color: #64948c;
+    color: #fff;
+    padding: 10px;
+}
+
+.titleYear{
+    background-color: #64948c;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.reprovacaoTr{
+    align-items: start;
+    justify-content: start;
+    border-top: 1px solid #164a3d;
+    margin-top: 20px;
+    background-color: #def2e7;
+}
+
+.reprovacaoTd{
+    background-color: #def2e7;
+    text-align: start;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#pdfGenerate{
+    background-color: #64948c;
+    color: #fff;
+    padding: 10px;
+    width: 30%;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 0;
+    margin-bottom: 10px;
+}
+
+#pdfGenerate:hover{
+    background-color: #eee;
+    cursor: pointer;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.titleYearTr{
+    background-color: #def2e7;
+    border-top: 1px solid #164a3d;
+}
