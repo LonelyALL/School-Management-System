@@ -21,6 +21,20 @@
         require '../../connect/connect.php';
         require '../functions/functions.php';    
     ?>
+    
+    <header>
+        <div class="nav-bar-elements">
+            <img src="../../images/oregonnovalogo (5).png" alt="#">
+            <div class="logo">Autumn</div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href='desativados.php' id="botaoVoltar">Voltar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="box">
         <div class="content" id="content">
         <div class="title"><h3>Histórico Escolar:</h3></div>

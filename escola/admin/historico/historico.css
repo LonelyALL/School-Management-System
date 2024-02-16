@@ -16,8 +16,7 @@ body{
 
 .nomealuno{
     display: flex;
-    background-color: #164a3d;
-    background-color: #64948c;
+    background-color: black;
     padding: 10px;
     border: 2px solid #eee;
     border-radius: 5px;
@@ -28,7 +27,7 @@ body{
 }
 
 table{
-    background-color: #def2e7;
+    background-color: #fff;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 99.5%;
@@ -42,12 +41,12 @@ table tr{
     width: 100%;
 }
 table td{
-    background-color: #def2e7;
+    background-color: #fff;
     border: 0;
     padding: 10px;
     text-align: center;
     width: 5%;
-    color: #164a3d;
+    color: black;
 }
 
 .scrollable-table {
@@ -58,31 +57,38 @@ table td{
 }
 
 .title{
-    background-color: #64948c;
+    background-color: black;
     color: #fff;
     padding: 10px;
 }
 
 .titleYear{
-    background-color: #64948c;
+    background-color: black;
     color: #fff;
     padding: 10px;
     border-bottom: 1px solid #eee;
 }
 
+.titleYearTr{
+    background-color: #fff;
+}
+
 .reprovacaoTr{
     align-items: start;
     justify-content: start;
-    border-top: 1px solid #164a3d;
+    border-top: 1px solid black;
     margin-top: 20px;
-    background-color: #def2e7;
+    background-color: #fff;
+    width: 100%;
 }
 
 .reprovacaoTd{
-    background-color: #def2e7;
+    background-color: #fff;
     text-align: start;
     font-weight: bold;
     font-size: 15px;
+    color: black;
+    border-top: 1px solid black;
 }
 
 #pdfGenerate{
@@ -103,7 +109,69 @@ table td{
     transition-duration: 0.2s;
 }
 
-.titleYearTr{
-    background-color: #def2e7;
-    border-top: 1px solid #164a3d;
+header{
+
+    width: 100%;
+    height: 80px;
+    background: #164a3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo{
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.nav-bar-elements{
+
+    display: flex;
+    flex-direction: right;
+    justify-content: flex-start;
+}
+
+.nav-bar ul{
+
+    display: flex;
+}
+
+.nav-bar ul li a{
+
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover{
+
+    color: #11101b;
+    background: #eee;
+}
+
+#botaoVoltar{
+    background-color: inherit;
+    padding: 10px;
+    color: #fff;
+    border-radius: 15px;
+    border: 0;
+    font-size: 20px;
+}
+
+#botaoVoltar:hover{
+    background-color: #fff;
+    color: black;
+    transition-duration: 0.2s;
+    cursor: pointer;
 }

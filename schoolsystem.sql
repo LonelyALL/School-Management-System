@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Nov-2023 às 03:18
+-- Tempo de geração: 16-Fev-2024 às 23:11
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -18,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `escolaenzow`
+-- Banco de dados: `schoolsystem`
 --
+CREATE DATABASE IF NOT EXISTS `schoolsystem` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `schoolsystem`;
 
 -- --------------------------------------------------------
 
@@ -43,9 +45,12 @@ CREATE TABLE `alunos` (
 --
 
 INSERT INTO `alunos` (`nome`, `login`, `senha`, `matricula`, `turma`, `serie`, `segmento`, `status`) VALUES
-('ReactJsIsGoat', 'ReactJsIsGoa', '$2y$10$NmTtekOcHpqFtpwppb553uan3FcJrIA4..9GWtWLGRtsiWxrbOGlq', 50, '1301', '1', 'Ensino Fundamental I', 'Ativado'),
-('carlos', 'carlos', '$2y$10$/3Hf6fJxvIRA9X02VJbsjuGeUJd3xtAIF7MfIq6JObpzuP6zmUWgq', 48, '1301', '1', 'Ensino Fundamental I', 'Ativado'),
-('teste', 'teste', '$2y$10$qpbXyTtt7SFzMY2MPOL38OmAhKq77Xqgav9rKivg.7G.bnJFJA7LS', 49, '1301', '1', 'Ensino Fundamental I', 'Ativado');
+('Pedro Da Silva', 'pedro', '$2y$10$ua7P.U5rvLEMfrhQFnZdwOSEzQXKLl27ylyTUZbK3xtpDgUWx7l5O', 54, '101', '1', 'Ensino Fundamental I', 'Ativado'),
+('Teste Da Silva', 'teste', '$2y$10$22ee.Ji0iUkJy8Pd9yDXK.vWQJHBeIlcyeNRXxj4wRfJ5LqaQvtLa', 53, '101', '1', 'Ensino Fundamental I', 'Ativado'),
+('Carlos Da Silva', 'carlos', '$2y$10$uIrCurHADjLqeAOjWCal4.j.FMtZjU17.NpVfTk6j.zXQElWCp7qy', 52, '101', '1', 'Ensino Fundamental I', 'Ativado'),
+('Renato Da Silva', 'renato', '$2y$10$2Nqlc8AeD6Stso.P9rjJgecvK4lZ4kXBn7th7boiqOrIyyx1bT3K.', 55, '101', '1', 'Ensino Fundamental I', 'Ativado'),
+('Kaio Da Silva', 'Kaio', '$2y$10$7lYUnsI/E2G24ds6u87SuuqlPDWlSL8AxtgIMrM4BkMm0NZ1isZta', 56, '101', '1', 'Ensino Fundamental I', 'Ativado'),
+('Login Da Silva', 'login', '$2y$10$FI5TEufnnc5mMDNKGbvm9.O3EIIGSIrIPg7ckrjyn3wKBhc8uzGgG', 57, '3301', '12', 'Ensino Médio', 'Ativado');
 
 -- --------------------------------------------------------
 
@@ -61,14 +66,6 @@ CREATE TABLE `alunos_desativados` (
   `matricula` int(8) NOT NULL,
   `status` char(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `alunos_desativados`
---
-
-INSERT INTO `alunos_desativados` (`id`, `nome`, `login`, `senha`, `matricula`, `status`) VALUES
-(47, 'josue', 'josue', '$2y$10$DYhyPFt1TtHQK3Tpm/KNu.nhXyp3ZV0SbtKDIkpJy0E0NL2A2nB7a', 46, 'Desativado'),
-(48, 'luiz', 'luiz', '$2y$10$ky0vG1is6a4hXd9AbVU6n.5fp8N4FCdFhkgybJFPJGwVYWiuoAVCK', 47, 'Desativado');
 
 -- --------------------------------------------------------
 
@@ -86,8 +83,8 @@ CREATE TABLE `avaliacoes` (
 --
 
 INSERT INTO `avaliacoes` (`id`, `avaliacao`) VALUES
-(31, 'portal'),
-(33, 'Simulado Presencial');
+(35, 'Teste'),
+(36, 'Simulado');
 
 -- --------------------------------------------------------
 
@@ -100,14 +97,6 @@ CREATE TABLE `avaliacoes_ano` (
   `avaliacao` char(35) NOT NULL,
   `ano` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `avaliacoes_ano`
---
-
-INSERT INTO `avaliacoes_ano` (`id`, `avaliacao`, `ano`) VALUES
-(13, 'portal', 2023),
-(14, 'Simulado Presencial', 2023);
 
 -- --------------------------------------------------------
 
@@ -126,7 +115,7 @@ CREATE TABLE `gerencia` (
 --
 
 INSERT INTO `gerencia` (`gerenciaid`, `usuario`, `senha`) VALUES
-(1, 'admin', '$2y$10$ULyAarm5TCUI93ijOMKVJeV0YbeqkG9urvk1tsdf2ScuQ09OW5ogG');
+(1, 'admin', '$2y$10$Ifc4pq7Gkak7tPaTw3WMl.HuyhPaXkJ425TqA6RN3o9mbY1jad3o.');
 
 -- --------------------------------------------------------
 
@@ -144,13 +133,6 @@ CREATE TABLE `historico` (
   `ano` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Extraindo dados da tabela `historico`
---
-
-INSERT INTO `historico` (`id`, `id_aluno`, `materia`, `avaliacao`, `nota`, `bimestre`, `ano`) VALUES
-(56, 50, 'Portugues', 'portal', 20, 'bimestre1', 2023);
-
 -- --------------------------------------------------------
 
 --
@@ -167,9 +149,13 @@ CREATE TABLE `materias` (
 --
 
 INSERT INTO `materias` (`id`, `materia`) VALUES
-(2, 'Portugues'),
-(1, 'Matemática'),
-(3, 'Filosofia');
+(3, 'Geografia'),
+(2, 'Matemática'),
+(1, 'Português'),
+(4, 'Filosofia'),
+(5, 'Ciências'),
+(6, 'Hardware'),
+(7, 'Engenharia');
 
 -- --------------------------------------------------------
 
@@ -204,13 +190,6 @@ CREATE TABLE `notas_avaliacoes` (
   `bimestre` char(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Extraindo dados da tabela `notas_avaliacoes`
---
-
-INSERT INTO `notas_avaliacoes` (`id`, `id_aluno`, `materia`, `avaliacao`, `nota`, `bimestre`) VALUES
-(77, 50, '2', 'Simulado Presencial', 0, 'bimestre1');
-
 -- --------------------------------------------------------
 
 --
@@ -228,8 +207,11 @@ CREATE TABLE `professor` (
 --
 
 INSERT INTO `professor` (`proid`, `login`, `senha`) VALUES
-(1, 'carlos', '$2y$10$NOVk0ObkBQN1yexydLca0e9tQExf0DdkM/6/Pe6iGJgmqLq2ekfC6'),
-(2, 'josue', '$2y$10$DiCFdsqjDdGHA/rrXdSMYu17h.VB5uvRzprFWNgbcqxKv56Zm16mS');
+(2, 'Negao', '$2y$10$FERulI61P/eh7Ibkv3XyDe7BHvYjjZ02a.IyFIB/G6HIZQfkOquDy'),
+(1, 'Xandao', '$2y$10$yGiMwENa43cL8knY5svETuN6Hdl4CSd.0/eilIToRdJttQ22UI6US'),
+(3, 'Renato', '$2y$10$mggQSnUI70r/VGrUBhHfueQ1nqO3.PGQzt0UyT8YDx3PEmdMiWT7q'),
+(4, 'Pedro', '$2y$10$rytPTlnabZNLBaZ2CzkTwurccDyNIu8xfAn50AAzbEvG07Q4LINqO'),
+(5, 'Carlos', '$2y$10$n7eVtY0MsfmatWOi8qrcsecpZixf.RjGyT/oevgQ3Jt86bZd/qTF6');
 
 -- --------------------------------------------------------
 
@@ -282,8 +264,18 @@ CREATE TABLE `series` (
 --
 
 INSERT INTO `series` (`id`, `serie`, `segmento`) VALUES
+(2, 2, 'Ensino Fundamental I'),
 (1, 1, 'Ensino Fundamental I'),
-(3, 5, 'Ensino Fundamental II');
+(3, 3, 'Ensino Fundamental I'),
+(4, 4, 'Ensino Fundamental I'),
+(5, 5, 'Ensino Fundamental I'),
+(6, 6, 'Ensino Fundamental II'),
+(7, 7, 'Ensino Fundamental II'),
+(8, 8, 'Ensino Fundamental II'),
+(9, 9, 'Ensino Fundamental II'),
+(10, 1, 'Ensino Médio'),
+(11, 2, 'Ensino Médio'),
+(12, 3, 'Ensino Médio');
 
 -- --------------------------------------------------------
 
@@ -302,7 +294,18 @@ CREATE TABLE `turmas` (
 --
 
 INSERT INTO `turmas` (`id`, `turma`, `serie_id`) VALUES
-(1, '1301', 1);
+(1, '101', 1),
+(2, '201', 2),
+(3, '301', 3),
+(4, '401', 4),
+(5, '501', 5),
+(6, '601', 6),
+(7, '701', 7),
+(8, '801', 8),
+(9, '901', 9),
+(10, '1101', 10),
+(11, '2201', 11),
+(12, '3301', 12);
 
 -- --------------------------------------------------------
 
@@ -322,11 +325,22 @@ CREATE TABLE `turma_materia` (
 --
 
 INSERT INTO `turma_materia` (`id`, `turma`, `materia`, `proid`) VALUES
-(1, '1', 1, 1),
-(2, '2', 1, 1),
-(3, '2', 3, 1),
-(4, '1', 3, 1),
-(5, '1', 2, 1);
+(1, '1', 5, 5),
+(2, '10', 5, 5),
+(3, '2', 5, 5),
+(4, '11', 5, 5),
+(5, '3', 5, 5),
+(6, '12', 5, 5),
+(7, '4', 5, 5),
+(8, '5', 5, 5),
+(9, '6', 5, 5),
+(10, '7', 5, 5),
+(11, '12', 7, 5),
+(12, '12', 4, 5),
+(13, '12', 3, 5),
+(14, '12', 6, 5),
+(15, '12', 2, 5),
+(16, '12', 1, 5);
 
 --
 -- Índices para tabelas despejadas
@@ -430,7 +444,7 @@ ALTER TABLE `turma_materia`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `matricula` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `matricula` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de tabela `alunos_desativados`
@@ -442,7 +456,7 @@ ALTER TABLE `alunos_desativados`
 -- AUTO_INCREMENT de tabela `avaliacoes`
 --
 ALTER TABLE `avaliacoes`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de tabela `avaliacoes_ano`
@@ -454,13 +468,13 @@ ALTER TABLE `avaliacoes_ano`
 -- AUTO_INCREMENT de tabela `historico`
 --
 ALTER TABLE `historico`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de tabela `notas_avaliacoes`
 --
 ALTER TABLE `notas_avaliacoes`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT de tabela `recuperacao`

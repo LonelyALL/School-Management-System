@@ -337,8 +337,13 @@ table td{
     transition-duration: 0.2s;
 }
 
+.buttons-nota{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
 
-#form-notas button{
+.buttons-nota a{
     background-color: #03c938;
     padding: 10px;
     border-radius: 5px;
@@ -346,10 +351,11 @@ table td{
     margin-left: 10px;  
     font-size: 18px;
     color: black;
-    width: 15%;
+    width: 300px;
+    text-align: center;
 }
 
-#form-notas button:hover{
+.buttons-nota a:hover{
     background-color: #eee;
     color: black;
     transition-duration: 0.2s;

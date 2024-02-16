@@ -455,13 +455,13 @@
                 echo "</tr>";
             }
             echo '<tr class="reprovacaoTr">';
-            echo '<td class="reprovacaoTd" colspan="2">';
+            echo '<td class="reprovacaoTd" colspan="4">';
             echo "Total de Matérias: " . $totalMaterias;
             echo '</td>';
-            echo '<td class="reprovacaoTd" colspan="2">';
+            echo '<td class="reprovacaoTd" colspan="4">';
             echo "Matérias Reprovadas: " . $reprovacoes;
             echo '</td>';
-            echo '<td class="reprovacaoTd" colspan="2">';
+            echo '<td class="reprovacaoTd" colspan="4">';
             if($reprovacoes > 0){
                 echo "Situação Final: Reprovado.";
             }

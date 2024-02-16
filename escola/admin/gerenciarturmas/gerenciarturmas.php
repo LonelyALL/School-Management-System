@@ -20,9 +20,21 @@
     <?php 
         require '../../connect/connect.php';
         require "../functions/navbar.php";
+        require "../popup/popup.php";
         showNavbar();
     ?>
-    <div class="errors">
+
+    <div class="popup" id="popup">
+        <div class="popupbox">
+        <span>Você tem certeza que deseja realizar essa ação?</span>  
+            <div class="buttons">
+             <button id="cancelar" type="button">Cancelar</button>  
+             <button id="confirmar" type="button">Confirmar</button>   
+            </div>      
+        </div>  
+    </div>
+
+    <div class="errors" id="errors">
                 <?php if(isset($_GET['error'])){ ?>
                     <div id="error"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" color="red" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
@@ -33,7 +45,7 @@
                 <?php } ?>
             </div> 
     <main>
-        <div class="box">
+        <div class="box" id="box">
             <div class="table-container">
                 <?php   
                     require '../../connect/connect.php';
@@ -125,7 +137,7 @@
                     </div>
                     <div class="secondElement" style="display: flex;">
                         <div class="inputs-bottom">
-                            <form form action="deletarserie.php" method="post">
+                            <form action="deletarserie.php" method="post" id="deletarSerie">
                                 <div class="deletar">
                                 <span>Deletar série:</span>      
                                 <input type="text" name="deletserie" placeholder="Serie desejada" required="true">
@@ -142,16 +154,16 @@
                                             }
                                         ?>
                                 </select>
-                                <button type="submit">Deletar</button>
+                                <button type="button" id="botaoSerie">Deletar</button>
                                 </div>
                             </form>
                         </div>
                         <div class="inputs-bottom" style="margin-left: 5px;">                
-                            <form action="deletarturma.php" method="post">
+                            <form action="deletarturma.php" method="post" id="deletarTurma">
                                 <div class="deletar" style="margin-top: 20px;">
                                 <span>Deletar turma:</span>      
                                 <input type="text" name="deletturma" placeholder="Turma desejada" required="true">
-                                <button type="submit">Deletar</button>      
+                                <button type="button" id="botaoTurma">Deletar</button>      
                                 </div>
                             </form>   
                         </div>
@@ -174,7 +186,47 @@
                 destinoSelect.innerHTML = data;
             }
         });
-    });
+        });
     </script>
+        <script>
+                const box = document.getElementById("box");
+                const popup = document.getElementById("popup");
+                const confirmar = document.getElementById("confirmar");
+                const nav = document.getElementById("navbar");
+                const cancelar = document.getElementById("cancelar");
+
+                const botaoSerie = document.getElementById("botaoSerie");
+                const botaoTurma = document.getElementById("botaoTurma");
+
+                const formSerie = document.getElementById("deletarSerie");
+                const formTurma = document.getElementById("deletarTurma");
+
+                const errors = document.getElementById("errors");
+
+                qualForm = '';
+                
+                botaoSerie.onclick = () =>{
+                    popup.style.display = "flex";
+                    box.style.display = "none";
+                    nav.style.display = "none";
+                    errors.style.display = "none";
+                    qualForm = formSerie;
+                }
+
+                botaoTurma.onclick = () =>{
+                    popup.style.display = "flex";
+                    box.style.display = "none";
+                    nav.style.display = "none";
+                    errors.style.display = "none";
+                    qualForm = formTurma;
+                }
+
+                confirmar.onclick = () =>{
+                    qualForm.submit();
+                }
+                 cancelar.onclick = () =>{
+                    window.location.href = "gerenciarturmas.php";
+                }
+        </script>
 </body>
 </html>

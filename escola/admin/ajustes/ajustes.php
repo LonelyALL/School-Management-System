@@ -75,6 +75,15 @@
         }
     }
 ?>
+<?php 
+    if(isset($_GET['confirm'])){
+        if(isset($_GET['fecharnotas']) && !empty($_GET['fecharnotas'])){
+            require '../functions/functions.php';
+            
+            gerarHistoricoGeral();
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -91,7 +100,7 @@
     ?>
     <div class="popup" id="popup">
         <div class="popupbox">
-        <span>Você tem certeza que deseja deletar?</span>  
+        <span>Você tem certeza que deseja realizar essa ação ?</span>  
             <div class="buttons">
              <button id="cancelar" type="button">Cancelar</button>  
              <button id="confirmar" type="button">Confirmar</button>   
@@ -194,11 +203,9 @@
                 }
             ?>
         </div>
-    <form action="fecharnotasgerais.php" method="post" id="form-notas">
     <div class="buttons-nota">
-        <button type="submit">Fechar Notas</button>
-    </div>
-    </form>     
+        <a href="ajustes.php?popup=true&fecharnotas=true">Fechar Notas</a>
+    </div>    
     </div>   
     <?php 
        require '../popup/popup.php';
